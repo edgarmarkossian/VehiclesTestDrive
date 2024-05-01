@@ -44,9 +44,6 @@ namespace CustomersApi.Migrations
                     b.Property<int>("VehicleId")
                         .HasColumnType("int");
 
-                    b.Property<int>("VehiicleId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("VehicleId");

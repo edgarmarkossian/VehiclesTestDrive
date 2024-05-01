@@ -29,7 +29,6 @@ namespace CustomersApi.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VehiicleId = table.Column<int>(type: "int", nullable: false),
                     VehicleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

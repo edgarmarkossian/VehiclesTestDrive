@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CustomersApi.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20240501103958_InitialCreate")]
+    [Migration("20240501104526_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,9 +44,6 @@ namespace CustomersApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("VehicleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VehiicleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

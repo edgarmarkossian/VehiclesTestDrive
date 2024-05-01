@@ -6,7 +6,7 @@
 		public string Name { get; set; }
 		public string Email { get; set; }
 		public string Phone { get; set; }
-		public int VehiicleId { get; set; }
+		public int VehicleId { get; set; }
 		public Vehicle Vehicle { get; set; }
 	}
 }
