@@ -10,7 +10,7 @@ namespace VehiclesApi.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=VehiclesApi;User=sa;Password=password");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=VehicleApiDb;User=sa;Password=password");
         }
     }
 } 

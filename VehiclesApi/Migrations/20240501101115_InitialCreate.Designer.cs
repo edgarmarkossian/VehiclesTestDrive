@@ -11,7 +11,7 @@ using VehiclesApi.Data;
 namespace VehiclesApi.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20240429211511_InitialCreate")]
+    [Migration("20240501101115_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
