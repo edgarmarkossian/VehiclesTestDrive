@@ -19,9 +19,9 @@ namespace ReservationsApi.Services
     {
         private ApiDbContext _dbContext;
         private Serilog.ILogger _logger;
-        private readonly string _smtpHost = "smtp.live.com";
-        private readonly string _email = "edomarkosyan@gmail.com";
-        private readonly string _password = "Fusion.2015";
+        private readonly string _smtpHost = "smtp.gmail.com";
+        private readonly string _email = "email@gmail.com";
+        private readonly string _password = "password";
         private readonly string _rabbitMQQueue = "rabbitorderqueue";
         private readonly string _rabbitConnection = "localhost";
 
@@ -97,13 +97,20 @@ namespace ReservationsApi.Services
                 var reservationResult = await _dbContext.Reservations.FindAsync(id);
                 if (reservationResult != null && reservationResult.IsMailSent == false)
                 {
-                    var smtpClient = new SmtpClient(_smtpHost)
-                    {
-                        Port = 587,
-                        Credentials = new NetworkCredential(_email, _password),
-                        EnableSsl = true
-                    };
-                    smtpClient.Send(_email, reservationResult.Email, "VehicleTestDrive", "Your test drive is reserved");
+                    //MailMessage mail = new(_email, _email);
+                    //mail.Subject = "VehicleTestDrive";
+                    //mail.Body = "Your test drive is reserved";
+
+                    //var smtpClient = new SmtpClient(_smtpHost)
+                    //{
+                    //    Port = 587,
+                    //    Credentials = new NetworkCredential(_email, _password),
+                    //    EnableSsl = true,
+                    //    UseDefaultCredentials = false
+                    //};
+
+                    //smtpClient.Send(mail);
+
                     reservationResult.IsMailSent = true;
                     await _dbContext.SaveChangesAsync();
                 }
